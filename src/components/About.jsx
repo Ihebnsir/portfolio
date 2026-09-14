@@ -56,8 +56,8 @@ function About() {
           <article className="about-story about-reveal about-reveal-two">
             <span className="about-index">01 — THE PERSON BEHIND THE BUILD</span>
             <h3>Who I am</h3>
-            <p>I am a Telecommunications Engineering student and full-stack developer interested in building reliable digital systems, understanding how networks communicate, and developing modern web applications.</p>
-            <p className="about-story-note">I&apos;m continuously learning through practical projects, with a growing focus on distributed systems, Linux, networking, and the foundations of cybersecurity.</p>
+            <p>I am a 2nd-year Telecommunications Engineering student and full-stack developer interested in building reliable digital systems, understanding how networks communicate, and developing modern web applications.</p>
+            <p className="about-story-note">I&apos;m continuously learning through practical projects, with a growing focus on distributed systems, Linux, networking, and the foundations of cybersecurity alongside modern software development practices.</p>
           </article>
 
           <div className="profile-stage about-reveal about-reveal-three">
@@ -68,9 +68,9 @@ function About() {
                 <span className="profile-code">SYS.01</span>
               </div>
               <dl className="profile-list">
-                <div><dt>Role</dt><dd>Telecommunications Engineering Student</dd></div>
-                <div><dt>Focus</dt><dd>Full-Stack Development</dd></div>
-                <div><dt>Interests</dt><dd><span>Networking</span><span>Linux</span><span>Cybersecurity</span><span>Software Engineering</span></dd></div>
+                <div><dt>Role</dt><dd>2nd-Year Telecommunications Engineering Student</dd></div>
+                <div><dt>Focus</dt><dd>Full-Stack Development & Networking</dd></div>
+                <div><dt>Interests</dt><dd><span>Networking</span><span>Linux</span><span>Cybersecurity</span><span>Software Engineering</span><span>AI & Automation</span></dd></div>
                 <div><dt>Status</dt><dd className="profile-status">Currently Learning / Building</dd></div>
               </dl>
             </div>

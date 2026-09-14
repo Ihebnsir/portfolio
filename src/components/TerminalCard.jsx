@@ -8,17 +8,19 @@ function TerminalCard() {
       </div>
       <div className="terminal-body">
         <p><span className="terminal-prompt">$</span> whoami</p>
-        <p className="terminal-output">Telecommunications Engineering Student<br />Full-Stack Developer</p>
+        <p className="terminal-output">2nd-Year Telecommunications Engineering Student<br />Full-Stack Developer</p>
         <p className="terminal-gap"><span className="terminal-prompt">$</span> stack</p>
         <div className="stack-list" aria-label="Technology stack list">
+          <span>Networking</span>
+          <span>JavaScript</span>
           <span>React</span>
           <span>Node.js</span>
           <span>MongoDB</span>
-          <span>Networking</span>
           <span>Linux</span>
-          <span>Git</span>
+          <span>Cybersecurity</span>
+          <span>n8n</span>
         </div>
-        <p className="terminal-build">&gt; Building a more connected future...</p>
+        <p className="terminal-build">&gt; Building practical solutions at the intersection of networks and software...</p>
         <span className="terminal-cursor" aria-hidden="true" />
       </div>
     </aside>

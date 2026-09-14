@@ -1,0 +1,170 @@
+const tunisieTelecomExperience = {
+  id: 'tunisie-telecom',
+  organization: 'Tunisie Télécom',
+  title: 'Telecommunications Engineering Internship',
+  location: 'Regional Directorate — Sfax, Tunisia',
+  date: 'July 2026',
+  period: 'July 1st – July 31st, 2026',
+  category: 'Telecommunications • Network Access • IP-MSAN',
+  status: 'COMPLETED',
+  description: 'An introductory engineering internship focused on discovering the operation of a telecommunications operator and understanding the practical implementation of access-network technologies, maintenance procedures and IP-based multiservice architectures.',
+  academicContext: 'First-year internship completed during initial Telecommunications Engineering studies at ENET\'Com.',
+  detailedOverview: 'During this internship, I studied the architecture of the Subscriber Line Network (RLA), observed network maintenance and fault-diagnosis procedures, and explored IP-MSAN equipment and its role in the evolution of traditional access networks toward IP-based multiservice architectures.',
+  
+  accessNetworkArchitecture: {
+    title: 'Access Network Architecture',
+    description: 'The Subscriber Line Network (RLA) forms the foundational access infrastructure connecting end subscribers to the telecommunications operator\'s core network.',
+    hierarchy: [
+      { level: 'RG', fullName: 'Main Distribution Frame (RG)', description: 'Central hub aggregating subscriber connections from multiple distribution points' },
+      { level: 'SR', fullName: 'Sub-Distribution Point (SR)', description: 'Intermediate aggregation point connecting multiple concentration points' },
+      { level: 'PC', fullName: 'Concentration Point (PC)', description: 'Local distribution point serving subscriber groups' },
+      { level: 'Subscriber', fullName: 'Subscriber Connection', description: 'End user connection to the access network' },
+    ],
+    cableTypes: [
+      { type: 'Primary Cables', description: 'Large-gauge copper cables connecting RG to SR infrastructure' },
+      { type: 'Secondary Cables', description: 'Medium-gauge cables connecting SR to PC distribution points' },
+      { type: 'Subscriber Drop Cables', description: 'Individual copper cables from PC to subscriber premises' },
+    ],
+    keyPoints: ['Copper access infrastructure', 'Hierarchical distribution', 'Centralized management', 'Subscriber connectivity'],
+  },
+
+  networkMaintenance: {
+    title: 'Network Maintenance & Troubleshooting',
+    description: 'Professional procedures for diagnosing and resolving access-network faults to ensure service continuity.',
+    workflow: [
+      'FAULT REPORT',
+      'REMOTE DIAGNOSIS',
+      'FIELD INSPECTION',
+      'MEASUREMENTS',
+      'FAULT LOCALIZATION',
+      'REPAIR',
+      'FINAL VERIFICATION',
+    ],
+    procedures: [
+      { name: 'Fault Diagnosis', description: 'Initial assessment and categorization of reported service issues' },
+      { name: 'Line Testing', description: 'Verification of line integrity and connectivity' },
+      { name: 'Fault Localization', description: 'Precise identification of fault location in network infrastructure' },
+      { name: 'Continuity Testing', description: 'Verification of signal continuity across cable runs' },
+      { name: 'Resistance Measurement', description: 'Measurement of line resistance to identify breaks and faults' },
+      { name: 'Insulation Testing', description: 'Testing of cable insulation integrity' },
+      { name: 'Voltage Measurement', description: 'Measurement of supply voltage and signal levels' },
+      { name: 'Field Inspection', description: 'On-site physical inspection of access network components' },
+      { name: 'Corrective Maintenance', description: 'Implementation of repairs and corrections' },
+      { name: 'Final Service Verification', description: 'Confirmation that service has been restored to specification' },
+    ],
+  },
+
+  technicalEquipment: {
+    title: 'Technical Equipment Exposure',
+    description: 'I gained practical exposure to field equipment used in access network maintenance and troubleshooting.',
+    equipment: [
+      { name: 'Digital Multimeter', category: 'Measurement' },
+      { name: 'Test Telephone', category: 'Testing' },
+      { name: 'Tone Generator', category: 'Testing' },
+      { name: 'Cable Detector', category: 'Localization' },
+      { name: 'Reflectometer', category: 'Testing' },
+      { name: 'ADSL/VDSL Tester', category: 'Line Testing' },
+      { name: 'Cable Crimping Tools', category: 'Installation' },
+      { name: 'Field Maintenance Tools', category: 'General' },
+    ],
+  },
+
+  ipMsan: {
+    title: 'IP-MSAN & Access Network Modernization',
+    description: 'IP-MSAN (Internet Protocol Multi-Service Access Node) represents a modern access architecture capable of aggregating multiple services and integrating access infrastructure with an IP-based transport network.',
+    role: 'IP-MSAN acts as a critical interface between traditional access networks and modern IP-based transport infrastructure, enabling service convergence and network modernization.',
+    architecture: [
+      'INTERNET',
+      'IP BACKBONE',
+      'ROUTER / IP NETWORK',
+      'IP-MSAN',
+      'ACCESS NETWORK',
+      'SUBSCRIBER',
+    ],
+    keyCapabilities: [
+      'Multi-service aggregation',
+      'ADSL/VDSL line termination',
+      'VoIP integration',
+      'Ethernet service delivery',
+      'IP transport connectivity',
+      'Service quality management',
+    ],
+  },
+
+  ipMsanComponents: {
+    title: 'IP-MSAN Components',
+    description: 'Typical IP-MSAN equipment integrates multiple functional components for access service delivery.',
+    components: [
+      { name: 'Power Supply Card', description: 'Redundant power conditioning and distribution for system reliability' },
+      { name: 'Processor / Control Card', description: 'Central processing and management of MSAN operations' },
+      { name: 'ADSL Cards', description: 'Line termination and DSL signal processing for ADSL services' },
+      { name: 'VDSL / VDSL2 Cards', description: 'High-speed line termination supporting next-generation broadband' },
+      { name: 'VoIP Functions', description: 'Voice over IP processing and call handling' },
+      { name: 'Ethernet Interfaces', description: 'Data service connectivity and transport' },
+    ],
+    note: 'Exact hardware architecture varies by manufacturer and model; Nokia Siemens Networks equipment may differ from other vendors.',
+  },
+
+  nokiaSiemensNetworks: {
+    title: 'Nokia Siemens Networks Equipment',
+    description: 'During the internship, I was introduced to Nokia Siemens Networks access equipment and IP-MSAN architecture.',
+    exposure: 'Technical exposure to Nokia Siemens Networks access equipment, IP-MSAN architecture, and operator-grade network infrastructure.',
+  },
+
+  telecomKnowledge: {
+    title: 'Telecommunications Knowledge',
+    keywords: [
+      'Access Network Architecture',
+      'Subscriber Connectivity',
+      'Copper Access Networks',
+      'Broadband Access',
+      'ADSL',
+      'VDSL / VDSL2',
+      'VoIP',
+      'Ethernet',
+      'IP Transport',
+      'Multiservice Networks',
+      'Network Modernization',
+      'Network Supervision',
+      'Network Maintenance',
+      'Fault Diagnosis',
+      'Quality of Service',
+      'Network Availability',
+      'Scalability',
+    ],
+  },
+
+  engineeringSkillsDeveloped: {
+    title: 'Engineering Skills Developed',
+    skills: [
+      'Telecommunications Network Analysis',
+      'Network Architecture Understanding',
+      'Technical Troubleshooting',
+      'Fault Diagnosis',
+      'Measurement & Testing',
+      'Field Observation',
+      'Network Maintenance Concepts',
+      'IP-MSAN Architecture',
+      'Access Network Technologies',
+      'Technical Documentation',
+      'Safety Procedures',
+      'Technical Communication',
+      'Engineering Observation',
+    ],
+  },
+
+  significance: {
+    title: 'Why This Experience Matters',
+    description: 'This internship provided practical exposure to real telecommunications operator infrastructure and professional engineering practices.',
+    areas: [
+      { area: 'Telecommunications', icon: '📡' },
+      { area: 'Network Infrastructure', icon: '🔗' },
+      { area: 'Access Networks', icon: '🏗️' },
+      { area: 'Maintenance & Troubleshooting', icon: '🔧' },
+      { area: 'IP Technologies', icon: '💻' },
+    ],
+    integration: 'This internship experience complements my full-stack development profile, demonstrating that I am a multidisciplinary Telecommunications Engineering student with hands-on exposure to operator infrastructure and practical experience across multiple technical domains.',
+  },
+};
+
+export default tunisieTelecomExperience;

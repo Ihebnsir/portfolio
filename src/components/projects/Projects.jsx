@@ -1,25 +1,8 @@
-import { useEffect, useState } from 'react';
-import ProjectDetails from './ProjectDetails';
-import ProjectTechnicalCaseStudy from './ProjectTechnicalCaseStudy';
+import { Link } from 'react-router-dom';
 import SkillBridgeVisual from './SkillBridgeVisual';
 import skillBridgeProject from './projectsData';
 
 function Projects() {
-  const [detailsOpen, setDetailsOpen] = useState(false);
-
-  useEffect(() => {
-    if (!detailsOpen) return undefined;
-    const handleKeyDown = (event) => {
-      if (event.key === 'Escape') setDetailsOpen(false);
-    };
-    document.body.style.overflow = 'hidden';
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.body.style.overflow = '';
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [detailsOpen]);
-
   return (
     <section id="projects" className="projects-section" aria-labelledby="projects-title">
       <div className="projects-grid-bg" aria-hidden="true" />
@@ -43,12 +26,10 @@ function Projects() {
             <div className="project-tech-list" aria-label="SkillBridge technologies">{skillBridgeProject.featuredTechnologies.map((technology) => <span key={technology}>{technology}</span>)}</div>
             <ul className="project-feature-list">{skillBridgeProject.features.map((feature) => <li key={feature}><i />{feature}</li>)}</ul>
             <div className="project-meta-lines"><span>AI // N8N + AI AGENT</span><span>STORAGE // SUPABASE</span><span>REGION // TUNISIA</span></div>
-            <div className="project-actions"><a className="button button-primary" href={skillBridgeProject.liveUrl} target="_blank" rel="noopener noreferrer" aria-label="View SkillBridge live project">View project <span aria-hidden="true">↗</span></a><button className="button button-secondary" type="button" onClick={() => setDetailsOpen(true)}>View case study <span aria-hidden="true">→</span></button></div>
+            <div className="project-actions"><a className="button button-primary" href={skillBridgeProject.liveUrl} target="_blank" rel="noopener noreferrer" aria-label="View SkillBridge live project">Live demo <span aria-hidden="true">↗</span></a><Link to="/projects/skillbridge" className="button button-secondary">View project <span aria-hidden="true">→</span></Link></div>
           </div>
         </article>
-        <ProjectTechnicalCaseStudy project={skillBridgeProject} />
       </div>
-      {detailsOpen && <ProjectDetails project={skillBridgeProject} onClose={() => setDetailsOpen(false)} />}
     </section>
   );
 }

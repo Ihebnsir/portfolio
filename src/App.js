@@ -1,19 +1,22 @@
 import './App.css';
-import About from './components/About';
-import Certifications from './components/certifications/Certifications';
-import Hero from './components/Hero';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Projects from './components/projects/Projects';
+import HomePage from './pages/HomePage';
+import SkillBridgeProject from './pages/SkillBridgeProject';
+import TunisieTelecomExperience from './pages/TunisieTelecomExperience';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Certifications />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects/skillbridge" element={<SkillBridgeProject />} />
+          <Route path="/experience/tunisie-telecom" element={<TunisieTelecomExperience />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
