@@ -1,0 +1,82 @@
+.project-modal-section { margin-top: 30px; }
+.project-roles-section { padding: 19px; border: 1px solid var(--line); background: rgba(17, 24, 32, 0.34); }
+.project-role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+.project-role-grid div { padding: 12px; border-left: 1px solid var(--cyan); background: rgba(9, 14, 19, 0.42); }
+.project-role-grid b { display: block; color: var(--text); font-size: 13px; font-weight: 400; }
+.project-role-grid span { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.project-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.project-detail-grid > div { padding-top: 16px; border-top: 1px solid var(--line); }
+.project-detail-grid p { margin: 11px 0 0; color: var(--muted); font-size: 11px; line-height: 1.65; }
+
+@media (max-width: 980px) {
+  .project-role-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 680px) {
+  .project-detail-grid { grid-template-columns: 1fr; gap: 18px; }
+}
+
+.project-technical-case-study { margin-top: 78px; }
+.project-case-study-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 17px; border-bottom: 1px solid var(--line); }
+.project-case-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr); gap: 17px; margin-top: 17px; }
+.project-case-grid-three { grid-template-columns: repeat(3, 1fr); }
+.project-case-grid-two { grid-template-columns: repeat(2, 1fr); }
+.project-case-panel { min-width: 0; padding: 21px; border: 1px solid var(--line); background: rgba(17, 24, 32, 0.48); }
+.project-case-panel p { margin: 11px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.what-built-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 16px; }
+.what-built-grid article { padding: 14px; border-top: 1px solid rgba(0, 229, 255, 0.25); background: rgba(9, 14, 19, 0.42); }
+.what-built-grid b { color: var(--cyan); font-family: Consolas, monospace; font-size: 10px; font-weight: 400; }
+.what-built-grid h4 { margin: 12px 0 5px; color: var(--text); font-size: 14px; font-weight: 400; }
+.what-built-grid p { margin: 0; font-size: 11px; line-height: 1.55; }
+.stack-groups { display: grid; gap: 13px; margin-top: 16px; }
+.stack-groups div { display: grid; grid-template-columns: 125px 1fr; gap: 10px; padding-bottom: 11px; border-bottom: 1px solid rgba(148, 163, 184, 0.1); }
+.stack-groups strong { color: var(--text); font-family: Consolas, monospace; font-size: 9px; font-weight: 400; text-transform: uppercase; }
+.stack-groups span { color: var(--muted); font-size: 11px; line-height: 1.45; }
+.project-architecture-wide { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 24px; align-items: center; margin-top: 17px; }
+.project-architecture-wide p { max-width: 260px; }
+.architecture-wide-flow { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--text); font-family: Consolas, monospace; font-size: 10px; text-align: center; }
+.architecture-wide-flow strong { min-width: 80px; padding: 12px 8px; border: 1px solid rgba(0, 229, 255, 0.22); background: rgba(9, 14, 19, 0.55); font-weight: 400; }
+.architecture-wide-flow small { color: var(--faint); font-size: 8px; }.architecture-wide-flow i { color: var(--cyan); font-style: normal; }
+.architecture-wide-services { display: flex; grid-column: 2; flex-wrap: wrap; gap: 6px; }.architecture-wide-services span, .case-chip-list span, .engineering-skill-grid span { padding: 6px 8px; border: 1px solid rgba(139, 92, 246, 0.25); color: var(--muted); font-family: Consolas, monospace; font-size: 9px; }
+.case-lead { min-height: 62px; color: var(--text) !important; font-size: 13px !important; }
+.case-list { display: grid; gap: 9px; padding: 0; margin: 16px 0 0; color: var(--muted); font-family: Consolas, monospace; font-size: 9px; list-style: none; }.case-list li { display: flex; align-items: center; gap: 7px; }.case-list i { width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); }
+.case-chip-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
+.case-flow { display: grid; gap: 6px; margin-top: 15px; color: var(--text); font-family: Consolas, monospace; font-size: 9px; }.case-flow strong { padding: 7px; border-left: 1px solid var(--cyan); background: rgba(9, 14, 19, 0.45); font-weight: 400; }.case-flow i { color: var(--cyan); font-style: normal; text-align: center; }
+.case-flow-inline { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 16px; color: var(--cyan); font-family: Consolas, monospace; font-size: 9px; }.case-flow-inline strong { color: var(--text); font-weight: 400; }.case-flow-inline i { color: var(--violet); font-style: normal; }
+.deployment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }.deployment-grid div { padding: 14px; border-left: 1px solid var(--cyan); background: rgba(9, 14, 19, 0.45); }.deployment-grid span { display: block; color: var(--faint); font-family: Consolas, monospace; font-size: 9px; text-transform: uppercase; }.deployment-grid strong { display: block; margin-top: 8px; color: var(--text); font-size: 15px; font-weight: 400; }
+.engineering-skill-grid { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.project-ai-panel { border-color: rgba(139, 92, 246, 0.3); background: linear-gradient(145deg, rgba(139, 92, 246, 0.07), rgba(17, 24, 32, 0.48)); }
+.project-feature { grid-template-columns: minmax(0, 1.12fr) minmax(430px, 0.88fr); gap: 72px; padding: 32px; }
+.project-info h3 { font-size: clamp(58px, 7vw, 94px); line-height: 0.95; }
+.project-tagline { max-width: 510px; font-size: 18px; }
+.project-overview { max-width: 570px; font-size: 15px; }
+.skillbridge-visual { min-height: 470px; }
+.skillbridge-visual-body { min-height: 401px; }
+.visual-capabilities { display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px; margin-top: 24px; }
+.visual-capabilities div { min-height: 73px; padding: 12px; border: 1px solid rgba(148, 163, 184, 0.13); background: rgba(9, 14, 19, 0.5); }
+.visual-capabilities span { display: block; color: var(--faint); font-family: Consolas, monospace; font-size: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
+.visual-capabilities strong { display: block; margin-top: 14px; color: var(--cyan); font-family: Consolas, monospace; font-size: 13px; font-weight: 400; }
+.visual-content-row { margin-top: 12px; }
+
+@media (max-width: 980px) {
+  .project-feature { grid-template-columns: 1fr; gap: 42px; }
+  .project-info h3 { font-size: 68px; }
+  .project-case-grid, .project-case-grid-three, .project-case-grid-two { grid-template-columns: 1fr; }
+  .project-architecture-wide { grid-template-columns: 1fr; }
+  .architecture-wide-services { grid-column: auto; }
+}
+
+@media (max-width: 680px) {
+  .project-feature { padding: 18px; }
+  .project-info h3 { font-size: 53px; }
+  .project-tagline { font-size: 16px; }
+  .project-overview { font-size: 13px; }
+  .project-technical-case-study { margin-top: 50px; }
+  .project-case-study-heading { align-items: flex-start; flex-direction: column; }
+  .what-built-grid { grid-template-columns: 1fr; }
+  .stack-groups div { grid-template-columns: 1fr; gap: 4px; }
+  .architecture-wide-flow { align-items: stretch; flex-direction: column; }
+  .architecture-wide-flow i { transform: rotate(0); }
+  .deployment-grid { grid-template-columns: 1fr; }
+  .case-lead { min-height: auto; }
+}
