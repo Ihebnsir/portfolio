@@ -1,3 +1,4 @@
+import { FaFacebookF, FaGithub, FaInstagram } from 'react-icons/fa6';
 import About from '../components/About';
 import Certifications from '../components/certifications/Certifications';
 import Hero from '../components/Hero';
@@ -66,7 +67,7 @@ function HomePage() {
       <section id="how-i-build" className="build-section" aria-labelledby="build-title">
         <div className="container build-container">
           <header className="build-header build-reveal build-reveal-one">
-            <span className="section-eyebrow"><i />How I Build</span>
+            <span className="section-eyebrow"><i />05 / How I Build</span>
             <h2 id="build-title">A practical engineering approach.</h2>
             <p>I work best when I combine systems thinking, iterative prototyping, and a clear technical foundation.</p>
           </header>
@@ -88,7 +89,7 @@ function HomePage() {
       <section id="exploring" className="exploring-section" aria-labelledby="exploring-title">
         <div className="container exploring-container">
           <header className="exploring-header exploring-reveal exploring-reveal-one">
-            <span className="section-eyebrow"><i />Currently Exploring</span>
+            <span className="section-eyebrow"><i />06 / Currently Exploring</span>
             <h2 id="exploring-title">Focused on the next layer of <span>technical depth.</span></h2>
           </header>
 
@@ -104,6 +105,45 @@ function HomePage() {
       </section>
 
       <Certifications />
+
+      <section id="contact" className="contact-section" aria-labelledby="contact-title">
+        <div className="contact-glow" aria-hidden="true" />
+        <div className="container contact-container">
+          <header className="contact-header">
+            <span className="section-eyebrow"><i />07 / Contact</span>
+            <h2 id="contact-title">Let&apos;s connect.</h2>
+            <p>I&apos;m open to conversations around engineering work, full-stack development, telecommunications systems, networking, and practical technology projects.</p>
+          </header>
+
+          <div className="contact-actions">
+            <a className="button button-primary" href="mailto:EMAIL_ADDRESS" aria-label="Email me">Email me <span aria-hidden="true">→</span></a>
+            <button
+              type="button"
+              className="button button-secondary"
+              aria-label="GitHub"
+            >
+              <FaGithub aria-hidden="true" />
+              GitHub
+            </button>
+            <button
+              type="button"
+              className="button button-secondary"
+              aria-label="Facebook"
+            >
+              <FaFacebookF aria-hidden="true" />
+              <span>Facebook</span>
+            </button>
+            <button
+              type="button"
+              className="button button-secondary"
+              aria-label="Instagram"
+            >
+              <FaInstagram aria-hidden="true" />
+              <span>Instagram</span>
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

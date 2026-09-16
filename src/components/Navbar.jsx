@@ -1,17 +1,40 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const navigationItems = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Certifications', href: '#certifications' },
   { label: 'Contact', href: '#contact' },
 ];
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const sectionNodes = document.querySelectorAll('main[id], section[id]');
+
+    const handleIntersect = (entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visibleEntry) {
+        setActiveSection(visibleEntry.target.id);
+      }
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, {
+      rootMargin: '-20% 0px -55% 0px',
+      threshold: [0.2, 0.4, 0.6],
+    });
+
+    sectionNodes.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -38,10 +61,10 @@ function Navbar() {
 
         <div className={`nav-panel ${menuOpen ? 'is-open' : ''}`} id="primary-navigation">
           <ul className="nav-links">
-            {navigationItems.map((item, index) => (
+            {navigationItems.map((item) => (
               <li key={item.href}>
                 <a
-                  className={index === 0 ? 'active' : ''}
+                  className={activeSection === item.href.slice(1) ? 'active' : ''}
                   href={item.href}
                   onClick={closeMenu}
                 >
