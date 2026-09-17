@@ -3,11 +3,12 @@
    ================================= */
 
 .experience-section {
-  padding: 80px 0;
-  border-top: 1px solid rgba(0, 229, 255, 0.1);
-  border-bottom: 1px solid rgba(0, 229, 255, 0.1);
   position: relative;
+  padding: 96px 0 112px;
+  border-top: 1px solid rgba(148, 163, 184, 0.08);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
   overflow: hidden;
+  background: radial-gradient(circle at 85% 12%, rgba(139, 92, 246, 0.08), transparent 24%), radial-gradient(circle at 15% 76%, rgba(0, 229, 255, 0.05), transparent 22%), var(--bg);
 }
 
 .experience-section::before {
@@ -31,41 +32,44 @@
    ================================= */
 
 .experience-header {
-  margin-bottom: 60px;
+  max-width: 760px;
+  margin-bottom: 56px;
 }
 
 .experience-header .section-eyebrow {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.14em;
   color: var(--cyan);
   margin-bottom: 16px;
   text-transform: uppercase;
 }
 
 .experience-header .section-eyebrow i {
-  width: 6px;
-  height: 6px;
+  width: 28px;
+  height: 1px;
   background: var(--cyan);
-  border-radius: 50%;
+  border-radius: 0;
   display: inline-block;
+  box-shadow: var(--glow-cyan);
 }
 
 .experience-header h2 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 400;
+  line-height: 1.03;
+  letter-spacing: -0.035em;
   margin-bottom: 16px;
 }
 
 .experience-header p {
-  font-size: 18px;
+  font-size: var(--font-size-body-lg);
   color: var(--muted);
-  line-height: 1.6;
+  line-height: var(--line-height-relaxed);
   margin: 0;
 }
 
