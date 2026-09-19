@@ -1,6 +1,6 @@
-function TerminalCard() {
+function TerminalCard({ className = '' }) {
   return (
-    <aside className="terminal-card" aria-label="Technology stack">
+    <aside className={`terminal-card ${className}`.trim()} aria-label="Technology stack">
       <div className="terminal-bar">
         <span className="terminal-lights" aria-hidden="true"><i /><i /><i /></span>
         <span>iheb@portfolio:~</span>

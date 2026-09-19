@@ -1,4 +1,5 @@
 import './SkillsStyles.css';
+import TopologyWidget from './TopologyWidget';
 import {
   SiReact,
   SiJavascript,
@@ -230,6 +231,10 @@ function Skills() {
               </article>
             );
           })}
+        </div>
+
+        <div className="skills-widget-row">
+          <TopologyWidget />
         </div>
       </div>
     </section>

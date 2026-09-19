@@ -1,4 +1,4 @@
-import { FaFacebookF, FaGithub, FaInstagram } from 'react-icons/fa6';
+import { FaGithub } from 'react-icons/fa6';
 import About from '../components/About';
 import Certifications from '../components/certifications/Certifications';
 import Hero from '../components/Hero';
@@ -6,6 +6,7 @@ import Projects from '../components/projects/Projects';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import TechStackMarquee from '../components/TechStackMarquee';
+import { profile } from '../data/profile';
 
 const buildSteps = [
   {
@@ -116,31 +117,11 @@ function HomePage() {
           </header>
 
           <div className="contact-actions">
-            <a className="button button-primary" href="mailto:EMAIL_ADDRESS" aria-label="Email me">Email me <span aria-hidden="true">→</span></a>
-            <button
-              type="button"
-              className="button button-secondary"
-              aria-label="GitHub"
-            >
+            <a className="button button-primary" href={profile.social.linkedin} target="_blank" rel="noreferrer" aria-label="Visit LinkedIn profile">LinkedIn <span aria-hidden="true">→</span></a>
+            <a className="button button-secondary" href={profile.social.github} target="_blank" rel="noreferrer" aria-label="Visit GitHub profile">
               <FaGithub aria-hidden="true" />
               GitHub
-            </button>
-            <button
-              type="button"
-              className="button button-secondary"
-              aria-label="Facebook"
-            >
-              <FaFacebookF aria-hidden="true" />
-              <span>Facebook</span>
-            </button>
-            <button
-              type="button"
-              className="button button-secondary"
-              aria-label="Instagram"
-            >
-              <FaInstagram aria-hidden="true" />
-              <span>Instagram</span>
-            </button>
+            </a>
           </div>
         </div>
       </section>

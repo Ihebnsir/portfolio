@@ -16,7 +16,7 @@ const certifications = [
     id: 'full-stack-js-node-react',
     title: 'Full Stack JS (Node & React) Training',
     issuer: '9antra',
-    recipient: 'Nsir Iheb',
+    recipient: 'Iheb Ncir',
     training: 'Two Months of Full Stack JS (Node & React) training and coaching',
     date: '01/09/2026',
     website: 'www.9antra.tn',

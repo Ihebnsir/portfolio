@@ -6,7 +6,11 @@ function CertificationCard({ certification, onView }) {
         <span className="cert-category">{certification.category}</span>
       </div>
       <div className="cert-card-body">
-        <div className="cert-card-meta"><span>{certification.date || 'Date not provided'}</span>{certification.credentialId && <span>Credential ID</span>}</div>
+        {certification.date && (
+          <div className="cert-card-meta">
+            <span>{certification.date}</span>
+          </div>
+        )}
         <h3>{certification.title}</h3>
         <p className="cert-issuer">{certification.issuer}</p>
         {certification.type && <p className="cert-detail">{certification.type}</p>}
@@ -18,7 +22,6 @@ function CertificationCard({ certification, onView }) {
             {certification.skills.map((skill) => <span key={skill}>{skill}</span>)}
           </div>
         )}
-        {certification.credentialId && <p className="cert-credential">ID: {certification.credentialId}</p>}
         <div className="cert-actions">
           <button className="cert-view-button" type="button" onClick={() => onView(certification)}>
             View certificate <span aria-hidden="true">→</span>

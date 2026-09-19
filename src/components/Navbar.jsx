@@ -1,13 +1,5 @@
 import { useEffect, useState } from 'react';
-
-const navigationItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
-];
+import { navItems, profile } from '../data/profile';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,7 +35,7 @@ function Navbar() {
       <nav className="navbar container" aria-label="Primary navigation">
         <a className="brand" href="#home" onClick={closeMenu} aria-label="Go to home">
           <span className="brand-mark" aria-hidden="true">IN</span>
-          <span className="brand-name">Iheb Ncir</span>
+          <span className="brand-name">{profile.name}</span>
         </a>
 
         <button
@@ -61,7 +53,7 @@ function Navbar() {
 
         <div className={`nav-panel ${menuOpen ? 'is-open' : ''}`} id="primary-navigation">
           <ul className="nav-links">
-            {navigationItems.map((item) => (
+            {navItems.map((item) => (
               <li key={item.href}>
                 <a
                   className={activeSection === item.href.slice(1) ? 'active' : ''}

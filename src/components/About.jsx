@@ -1,3 +1,6 @@
+import RoleBadges from './RoleBadges';
+import TerminalCard from './TerminalCard';
+
 const highlights = [
   { index: '01', label: 'Telecommunications', value: 'Engineering' },
   { index: '02', label: 'Full-Stack', value: 'Development' },
@@ -78,21 +81,21 @@ function About() {
         </div>
 
         <div className="about-lower-grid">
-          <div className="about-highlights" aria-label="Professional focus areas">
-            {highlights.map((highlight, index) => (
-              <div className={`highlight-item about-reveal about-reveal-${index + 2}`} key={highlight.index}>
-                <span className="highlight-index">{highlight.index}</span>
-                <span className="highlight-label">{highlight.label}</span>
-                <strong>{highlight.value}</strong>
-              </div>
-            ))}
+          <div className="about-focus-stack">
+            <RoleBadges />
+            <div className="about-highlights" aria-label="Professional focus areas">
+              {highlights.map((highlight, index) => (
+                <div className={`highlight-item about-reveal about-reveal-${index + 2}`} key={highlight.index}>
+                  <span className="highlight-index">{highlight.index}</span>
+                  <span className="highlight-label">{highlight.label}</span>
+                  <strong>{highlight.value}</strong>
+                </div>
+              ))}
+            </div>
           </div>
-          <aside className="about-terminal about-reveal about-reveal-four" aria-label="Current learning focus">
-            <div className="about-terminal-top"><span>iheb@portfolio:~</span><i className="terminal-dot" /></div>
-            <p><span>$</span> focus</p>
-            <ul><li>Networks</li><li>Full-Stack</li><li>Linux</li><li>Cybersecurity</li></ul>
-            <span className="about-terminal-cursor" aria-hidden="true" />
-          </aside>
+          <div className="about-terminal-wrap">
+            <TerminalCard className="terminal-card--about" />
+          </div>
         </div>
       </div>
     </section>
