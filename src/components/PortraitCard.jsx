@@ -9,7 +9,7 @@ function PortraitCard() {
         {imageAvailable ? (
           <img
             className="portrait-image"
-            src="/portrait.jpg"
+            src="/photo.png"
             alt="Portrait of Iheb Ncir"
             onError={() => setImageAvailable(false)}
           />
@@ -17,7 +17,7 @@ function PortraitCard() {
           <div className="portrait-placeholder">
             <span className="portrait-placeholder-mark" aria-hidden="true">+</span>
             <strong>Portrait unavailable</strong>
-            <span>portrait.jpg</span>
+            <span>photo.png</span>
           </div>
         )}
         <span className="portrait-corner portrait-corner-top" aria-hidden="true" />

@@ -68,7 +68,7 @@ function Hero() {
             </div>
 
             <div className="portrait-shell">
-              <img src="/portrait.jpg" alt="Portrait of Iheb Ncir" />
+              <img src="/photo.png" alt="Portrait of Iheb Ncir" />
             </div>
 
             <div className="panel-footer">

@@ -11,7 +11,7 @@ export const profile = {
     title: 'Iheb Ncir | Telecommunications Engineering Student & Full-Stack Developer',
     description: 'Portfolio of Iheb Ncir, a telecommunications engineering student and full-stack developer building resilient systems, secure networks, and practical digital product experiences.',
     url: 'https://iheb-ncir.com',
-    image: '/portrait.jpg',
+    image: '/photo.png',
   },
   roles: [
     'A Full-Stack Developer',
