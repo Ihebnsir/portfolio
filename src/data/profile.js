@@ -1,4 +1,4 @@
-export const cvUrl = '/documents/Iheb-Nsir-CV.pdf';
+export const cvUrl = `${process.env.PUBLIC_URL}/documents/Iheb-Nsir-CV.pdf`;
 
 export const profile = {
   name: 'Iheb Ncir',
