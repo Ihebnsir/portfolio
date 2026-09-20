@@ -58,6 +58,8 @@ function Navbar() {
                 <a
                   className={activeSection === item.href.slice(1) ? 'active' : ''}
                   href={item.href}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noreferrer' : undefined}
                   onClick={closeMenu}
                 >
                   {item.label}

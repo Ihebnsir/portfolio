@@ -142,6 +142,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   min-height: 52px;
   padding: 0 22px;
   border: 1px solid rgba(148, 163, 184, 0.24);
@@ -158,6 +159,11 @@
   transform: translateY(-2px);
 }
 
+.hero-actions a svg {
+  width: 13px;
+  height: 13px;
+}
+
 .hero-actions .primary-btn {
   background: linear-gradient(135deg, #7dd3fc, #a78bfa);
   border-color: transparent;
@@ -169,6 +175,10 @@
   color: #f8fbff;
   background: rgba(15, 23, 42, 0.42);
   backdrop-filter: blur(14px);
+}
+
+.hero-actions .cv-btn {
+  min-width: 180px;
 }
 
 .hero-meta {

@@ -1,3 +1,5 @@
+export const cvUrl = '/documents/Iheb-Nsir-CV.pdf';
+
 export const profile = {
   name: 'Iheb Ncir',
   title: 'Telecommunications engineering student and full-stack developer',
@@ -31,6 +33,7 @@ export const navItems = [
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'CV', href: cvUrl, external: true },
   { label: 'Contact', href: '#contact' },
 ];
 

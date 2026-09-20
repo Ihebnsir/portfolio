@@ -1,13 +1,8 @@
+import { FaDownload } from 'react-icons/fa6';
 import './Hero.css';
-import { getEmailHref, profile } from '../data/profile';
+import { cvUrl, profile } from '../data/profile';
 import useTypewriter from '../hooks/useTypewriter';
 import Starfield from './Starfield';
-
-const socialLinks = [
-  { label: 'GitHub', href: profile.social.github, text: 'GH' },
-  { label: 'LinkedIn', href: profile.social.linkedin, text: 'IN' },
-  { label: 'Email', href: getEmailHref(), text: '@' },
-];
 
 function Hero() {
   const { text } = useTypewriter(profile.roles, {
@@ -42,7 +37,10 @@ function Hero() {
 
           <div className="hero-actions">
             <a className="primary-btn" href="#projects">View projects</a>
-            <a className="secondary-btn" href={profile.social.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+            <a className="secondary-btn cv-btn" href={cvUrl} target="_blank" rel="noreferrer" download aria-label="Download my CV">
+              <FaDownload aria-hidden="true" />
+              Download CV
+            </a>
           </div>
 
           <div className="hero-meta" aria-label="Key professional markers">
@@ -59,16 +57,6 @@ function Hero() {
               <strong>available</strong>
             </span>
           </div>
-
-          <ul className="hero-social" aria-label="Social media links">
-            {socialLinks.map((link) => (
-              <li key={link.label}>
-                <a href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noreferrer' : undefined} aria-label={link.label}>
-                  {link.text}
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
 
         <div className="hero-visual" aria-label="Portrait and profile highlight">

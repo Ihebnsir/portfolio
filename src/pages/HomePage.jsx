@@ -1,4 +1,4 @@
-import { FaGithub } from 'react-icons/fa6';
+import { FaEnvelope, FaGithub, FaLinkedinIn, FaPhone } from 'react-icons/fa6';
 import About from '../components/About';
 import Certifications from '../components/certifications/Certifications';
 import Hero from '../components/Hero';
@@ -6,7 +6,6 @@ import Projects from '../components/projects/Projects';
 import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import TechStackMarquee from '../components/TechStackMarquee';
-import { profile } from '../data/profile';
 
 const buildSteps = [
   {
@@ -117,10 +116,21 @@ function HomePage() {
           </header>
 
           <div className="contact-actions">
-            <a className="button button-primary" href={profile.social.linkedin} target="_blank" rel="noreferrer" aria-label="Visit LinkedIn profile">LinkedIn <span aria-hidden="true">→</span></a>
-            <a className="button button-secondary" href={profile.social.github} target="_blank" rel="noreferrer" aria-label="Visit GitHub profile">
+            <a className="button button-primary" href="https://www.linkedin.com/in/iheb-nsir-7a275227" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn profile">
+              <FaLinkedinIn aria-hidden="true" />
+              LinkedIn
+            </a>
+            <a className="button button-secondary" href="https://github.com/Ihebnsir" target="_blank" rel="noreferrer" aria-label="Visit GitHub profile">
               <FaGithub aria-hidden="true" />
               GitHub
+            </a>
+            <a className="button button-secondary" href="mailto:ihebbennsir888@gmail.com" aria-label="Send an email">
+              <FaEnvelope aria-hidden="true" />
+              Email
+            </a>
+            <a className="button button-secondary" href="tel:+21622071999" aria-label="Call my phone number">
+              <FaPhone aria-hidden="true" />
+              +216 22 071 999
             </a>
           </div>
         </div>
