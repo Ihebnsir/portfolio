@@ -73,21 +73,9 @@ function Hero() {
 
             <div className="panel-footer">
               <span className="panel-status">{profile.availability}</span>
-              <span>Telco / Dev</span>
             </div>
           </div>
 
-          <aside className="floating-card card-top" aria-label="Systems overview">
-            <strong>Systems</strong>
-            <span>Network • Product • Security</span>
-            <span className="card-pill">Adaptive</span>
-          </aside>
-
-          <aside className="floating-card card-bottom" aria-label="Knowledge areas">
-            <strong>Driven by</strong>
-            <span>Curiosity + build loops</span>
-            <span className="card-pill">Research</span>
-          </aside>
         </div>
       </div>
     </header>

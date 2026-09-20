@@ -316,23 +316,16 @@
   filter: saturate(0.85) contrast(1.02) brightness(0.96);
 }
 
-.panel-footer {
-  display: flex;
+.panel-status {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
   padding-top: 16px;
   color: rgba(191, 219, 254, 0.72);
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.panel-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .panel-status::before {
@@ -345,76 +338,9 @@
   content: '';
 }
 
-.floating-card {
-  position: absolute;
-  min-width: 180px;
-  padding: 12px 14px;
-  border: 1px solid rgba(125, 211, 252, 0.2);
-  border-radius: 16px;
-  background: rgba(10, 16, 25, 0.8);
-  box-shadow: 0 24px 48px rgba(2, 7, 14, 0.32);
-  backdrop-filter: blur(12px);
-}
-
-.floating-card strong {
-  display: block;
-  color: #f8fbff;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.floating-card span {
-  display: block;
-  margin-top: 8px;
-  color: #9bb0d1;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.card-top {
-  top: 48px;
-  right: -18px;
-  animation: drift 5s ease-in-out infinite;
-}
-
-.card-bottom {
-  right: 32px;
-  bottom: 2px;
-  animation: drift 6.5s ease-in-out infinite reverse;
-}
-
-.card-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 10px;
-  color: #7dd3fc;
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.card-pill::before {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #a78bfa;
-  box-shadow: 0 0 10px rgba(167, 139, 250, 0.8);
-  content: '';
-}
-
 @keyframes blink {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
-}
-
-@keyframes drift {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
 }
 
 @media (max-width: 980px) {
@@ -433,9 +359,6 @@
     min-height: 560px;
   }
 
-  .card-top {
-    right: 18px;
-  }
 }
 
 @media (max-width: 640px) {
@@ -498,8 +421,4 @@
     height: 340px;
   }
 
-  .floating-card {
-    min-width: 150px;
-    padding: 10px 12px;
-  }
 }
