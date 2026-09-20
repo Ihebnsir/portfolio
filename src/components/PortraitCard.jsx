@@ -9,7 +9,7 @@ function PortraitCard() {
         {imageAvailable ? (
           <img
             className="portrait-image"
-            src="/photo.png"
+            src={`${process.env.PUBLIC_URL}/photo.png`}
             alt="Portrait of Iheb Ncir"
             onError={() => setImageAvailable(false)}
           />
