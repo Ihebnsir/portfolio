@@ -1,3 +1,7 @@
+import { Document, Page, pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `${process.env.PUBLIC_URL}/pdf.worker.min.mjs`;
+
 function CertificationCard({ certification, onView }) {
   const handleOpen = (event) => {
     event.preventDefault();
@@ -6,16 +10,26 @@ function CertificationCard({ certification, onView }) {
 
   return (
     <article className="cert-card has-pdf">
-      <a className="cert-preview" href={certification.pdfUrl} target="_blank" rel="noreferrer" aria-label={`Open ${certification.title} certificate PDF`} onClick={handleOpen}>
+      <div className="cert-preview" aria-label={`Certificate preview for ${certification.title}`}>
         <span className="cert-category">{certification.category}</span>
         <div className="cert-preview-visual" aria-hidden="true">
           <span className="cert-preview-badge">PDF</span>
           <div className="cert-preview-document">
-            <span className="cert-preview-document-header">Certificate</span>
-            <span className="cert-preview-document-title">{certification.title}</span>
+            <Document
+              file={certification.pdfUrl}
+              loading={<div className="cert-preview-loading">Loading preview…</div>}
+              error={<div className="cert-preview-error">Preview unavailable</div>}
+            >
+              <Page
+                pageNumber={1}
+                width={170}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+              />
+            </Document>
           </div>
         </div>
-      </a>
+      </div>
       <div className="cert-card-body">
         {certification.date && (
           <div className="cert-card-meta">
