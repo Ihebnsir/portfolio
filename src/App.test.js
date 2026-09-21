@@ -1,6 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
+jest.mock('react-pdf', () => ({
+  Document: ({ children }) => <div>{children}</div>,
+  Page: () => <div>PDF Page</div>,
+  pdfjs: { GlobalWorkerOptions: {} },
+}));
+
 test('renders the portfolio hero and navigation', () => {
   render(<App />);
   expect(screen.getByRole('heading', { name: /iheb ncir/i })).toBeInTheDocument();
@@ -8,6 +14,14 @@ test('renders the portfolio hero and navigation', () => {
   expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
   expect(screen.getByRole('heading', { name: 'SkillBridge' })).toBeInTheDocument();
   expect(screen.getByRole('link', { name: /view skillbridge live project/i })).toHaveAttribute('href', 'https://kaleidoscopic-parfait-dbaf5a.netlify.app/');
+});
+
+test('supports the custom-domain root URL without a portfolio basename', () => {
+  window.history.pushState({}, '', '/');
+  render(<App />);
+
+  expect(screen.getByRole('heading', { name: /iheb ncir/i })).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: /view projects/i })).toBeInTheDocument();
 });
 
 test('uses the canonical name and hides certificate credential IDs', () => {

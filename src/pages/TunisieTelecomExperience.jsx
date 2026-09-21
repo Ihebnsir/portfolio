@@ -345,7 +345,7 @@ function TunisieTelecomExperience() {
             </p>
 
             <a 
-              href="/documents/tunisie-telecom-internship-report.pdf.pdf" 
+              href={`${process.env.PUBLIC_URL}/documents/tunisie-telecom-internship-report.pdf.pdf`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="doc-link"

@@ -7,7 +7,7 @@ import TunisieTelecomExperience from './pages/TunisieTelecomExperience';
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <div className="App">
         <Navbar />
         <Routes>
