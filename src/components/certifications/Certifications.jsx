@@ -10,6 +10,11 @@ function Certifications() {
   const [query, setQuery] = useState('');
   const [selectedCertification, setSelectedCertification] = useState(null);
 
+  const openCertificate = (certification) => {
+    if (!certification) return;
+    window.open(certification.pdfUrl, '_blank', 'noopener,noreferrer');
+  };
+
   const visibleCertifications = certifications.filter((certification) => {
     const matchesFilter = activeFilter === 'All'
       || certification.category === activeFilter
@@ -50,7 +55,7 @@ function Certifications() {
         {visibleCertifications.length > 0 ? (
           <div className="cert-grid">
             {visibleCertifications.map((certification) => (
-              <CertificationCard key={certification.id} certification={certification} onView={setSelectedCertification} />
+              <CertificationCard key={certification.id} certification={certification} onView={openCertificate} />
             ))}
           </div>
         ) : (

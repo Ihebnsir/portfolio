@@ -29,7 +29,25 @@ function CertificationModal({ certification, onClose }) {
           <button className="cert-modal-close" type="button" onClick={onClose} aria-label="Close certificate preview">×</button>
         </div>
         <div className="cert-modal-image-wrap">
-          <iframe src={certification.pdfUrl} title={`${certification.title} certificate document`} />
+          <div className="cert-modal-preview" aria-label={`${certification.title} certificate preview`}>
+            <div className="cert-modal-preview-header">
+              <span>{certification.issuer}</span>
+              <span>Verified</span>
+            </div>
+            <div className="cert-modal-preview-document">
+              <div className="cert-modal-preview-sheet">
+                <span className="cert-modal-preview-sheet-title">{certification.title}</span>
+                <span className="cert-modal-preview-sheet-line cert-modal-preview-sheet-line-short" />
+                <span className="cert-modal-preview-sheet-line" />
+                <span className="cert-modal-preview-sheet-line" />
+                <span className="cert-modal-preview-sheet-line cert-modal-preview-sheet-line-short" />
+              </div>
+            </div>
+            <div className="cert-modal-preview-actions">
+              <a href={certification.pdfUrl} target="_blank" rel="noreferrer">Open PDF</a>
+              <a href={certification.pdfUrl} download>Download PDF</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
