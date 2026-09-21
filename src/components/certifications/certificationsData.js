@@ -26,17 +26,6 @@ const certifications = [
     fileName: 'Nsir Iheb.pdf',
   },
   {
-    id: 'bee-coders-full-stack-internship',
-    title: 'Attestation de stage – Full-Stack Development',
-    issuer: 'Bee Coders',
-    type: 'Stage / Internship',
-    date: '01 AUG 2026 — 31 AUG 2026',
-    category: 'Full-Stack Development',
-    description: 'Internship experience in Full-Stack Development at Bee Coders, focused on practical software development and professional experience within a digital solutions company.',
-    skills: ['Full-Stack Development', 'Internship', 'Software Development', 'Professional Experience'],
-    fileName: 'Iheb ncir (1) (1).pdf',
-  },
-  {
     id: 'hedera-certified-foundation',
     title: 'Hedera Certified Foundation (HCF)',
     issuer: 'Hedera / Hashgraph Association',

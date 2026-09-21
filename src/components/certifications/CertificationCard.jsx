@@ -9,15 +9,11 @@ function CertificationCard({ certification, onView }) {
       <a className="cert-preview" href={certification.pdfUrl} target="_blank" rel="noreferrer" aria-label={`Open ${certification.title} certificate PDF`} onClick={handleOpen}>
         <span className="cert-category">{certification.category}</span>
         <div className="cert-preview-visual" aria-hidden="true">
-          <span className="cert-preview-badge">Verified</span>
+          <span className="cert-preview-badge">PDF</span>
           <div className="cert-preview-document">
-            <span className="cert-preview-sheet-header" />
-            <span className="cert-preview-sheet-line cert-preview-sheet-line-short" />
-            <span className="cert-preview-sheet-line" />
-            <span className="cert-preview-sheet-line" />
-            <span className="cert-preview-sheet-line cert-preview-sheet-line-short" />
+            <span className="cert-preview-document-header">Certificate</span>
+            <span className="cert-preview-document-title">{certification.title}</span>
           </div>
-          <span className="cert-preview-title">{certification.title}</span>
         </div>
       </a>
       <div className="cert-card-body">
