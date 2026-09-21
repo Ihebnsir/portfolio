@@ -67,7 +67,7 @@ const certifications = [
 
 const certificationsWithUrls = certifications.map((certification) => ({
   ...certification,
-  pdfUrl: `/certificates/${encodeURIComponent(certification.fileName)}`,
+  pdfUrl: `${process.env.PUBLIC_URL}/certificates/${encodeURIComponent(certification.fileName)}`,
 }));
 
 export default certificationsWithUrls;
